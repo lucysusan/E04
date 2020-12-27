@@ -64,3 +64,14 @@ val data2 = data1.countByKey().toSeq.sortWith(_._2>_._2).take(100)
 // 再次转化为rdd后保存到本地文本文件
 sc.parallelize(data2).saveAsTextFile("hdfs:///e04/output1-1")
 ```
+
+3. 运行结果
+
+![1.1-Spark-shell(1)](figs/1.1-Spark-shell(1).png)
+
+![1.1-Spark-shell(2)](figs/1.1-Spark-shell(2).png)
+
+![1.1-Spark-shell(3)](figs/1.1-Spark-shell(3).png)
+
+![1.1-Spark-shell(4)](figs/1.1-Spark-shell(4).png)
+
