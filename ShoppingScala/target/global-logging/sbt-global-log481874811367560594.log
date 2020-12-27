@@ -1,0 +1,98 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.4.6 (Private Build Java 1.8.0_275)
+[debug]       Load.loadUnit: plugins took 122.437862ms
+[debug]       Load.loadUnit: defsScala took 0.496689ms
+[debug] [Loading] Scanning directory /home/lightea/.sbt/1.0/plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/lightea/.sbt/1.0/plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 122.406692 ms
+[debug]           Load.resolveProject(global-plugins) took 47.933528ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: /home/lightea/.sbt/1.0/plugins, plugins: List(<none>))) took 199.606998ms
+[debug] [Loading] Done in /home/lightea/.sbt/1.0/plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 228.111452ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.302354ms
+[debug]     Load.loadUnit(file:/home/lightea/.sbt/1.0/plugins/, ...) took 360.328953ms
+[debug]   Load.apply: load took 513.554876ms
+[debug]   Load.apply: resolveProjects took 7.227781ms
+[debug]   Load.apply: finalTransforms took 60.494655ms
+[debug]   Load.apply: config.delegates took 6.55899ms
+[debug]   Load.apply: Def.make(settings)... took 367.170653ms
+[debug]   Load.apply: structureIndex took 105.135703ms
+[debug]   Load.apply: mkStreams took 1.594342ms
+[info] loading global plugins from /home/lightea/.sbt/1.0/plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 2457.823446ms
+[debug]           Load.loadUnit: plugins took 10.600504ms
+[debug]           Load.loadUnit: defsScala took 0.004569ms
+[debug] [Loading] Scanning directory /home/lightea/IdeaProjects/ShoppingScala/project
+[debug]             Load.loadUnit: mkEval took 5.958399ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/lightea/IdeaProjects/ShoppingScala/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.149905 ms
+[info] loading settings for project shoppingscala-build from plugins.sbt ...
+[debug]               Load.resolveProject(shoppingscala-build) took 3.135999ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id shoppingscala-build, base: /home/lightea/IdeaProjects/ShoppingScala/project, plugins: List(<none>))) took 5.887535ms
+[debug] [Loading] Done in /home/lightea/IdeaProjects/ShoppingScala/project, returning: (shoppingscala-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 118.034731ms
+[debug]           Load.loadUnit: cleanEvalClasses took 4.845414ms
+[debug]         Load.loadUnit(file:/home/lightea/IdeaProjects/ShoppingScala/project/, ...) took 134.294935ms
+[debug]       Load.apply: load took 135.467353ms
+[debug]       Load.apply: resolveProjects took 0.203579ms
+[debug]       Load.apply: finalTransforms took 9.780244ms
+[debug]       Load.apply: config.delegates took 0.367758ms
+[debug]       Load.apply: Def.make(settings)... took 83.364142ms
+[debug]       Load.apply: structureIndex took 19.535411ms
+[debug]       Load.apply: mkStreams took 0.002802ms
+[info] loading project definition from /home/lightea/IdeaProjects/ShoppingScala/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 448.97096ms
+[debug]     Load.loadUnit: defsScala took 0.00427ms
+[debug] [Loading] Scanning directory /home/lightea/IdeaProjects/ShoppingScala
+[debug]       Load.loadUnit: mkEval took 0.203397ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/lightea/IdeaProjects/ShoppingScala, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbtide.ConfigPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.097742 ms
+[info] loading settings for project shoppingscala from build.sbt ...
+[debug]         Load.resolveProject(shoppingscala) took 1.255843ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id shoppingscala, base: /home/lightea/IdeaProjects/ShoppingScala, plugins: List(<none>))) took 3.916578ms
+[debug] [Loading] Done in /home/lightea/IdeaProjects/ShoppingScala, returning: (shoppingscala)
+[debug]     Load.loadUnit: loadedProjectsRaw took 40.038398ms
+[debug]     Load.loadUnit: cleanEvalClasses took 1.228644ms
+[debug]   Load.loadUnit(file:/home/lightea/IdeaProjects/ShoppingScala/, ...) took 490.95377ms
+[debug] Load.apply: load took 492.038408ms
+[debug] Load.apply: resolveProjects took 0.095723ms
+[debug] Load.apply: finalTransforms took 9.739068ms
+[debug] Load.apply: config.delegates took 0.552563ms
+[debug] Load.apply: Def.make(settings)... took 102.300283ms
+[debug] Load.apply: structureIndex took 18.707704ms
+[debug] Load.apply: mkStreams took 0.00337ms
+[info] set current project to ShoppingScala (in build file:/home/lightea/IdeaProjects/ShoppingScala/)
+[warn] there's a key that's not used by any other settings/tasks:
+[warn]  
+[warn] * shoppingscala / idePackagePrefix
+[warn]   +- /home/lightea/IdeaProjects/ShoppingScala/build.sbt:7
+[warn]  
+[warn] note: a setting might still be used by a command; to exclude a key from this `lintUnused` check
+[warn] either append it to `Global / excludeLintKeys` or call .withRank(KeyRanks.Invisible) on the key
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(shell, None, None)
+[info] sbt server started at local:///home/lightea/.sbt/1.0/server/0a9e49bf95705ad1ff01/sock
+[info] started sbt server
