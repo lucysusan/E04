@@ -307,3 +307,29 @@ dfra.withColumn("ratio",dfra("num")/329039).show
 ![3-Spark-shell(2)](figs/3-Spark-shell(2).png)
 
 ![3-Spark-shell(3)](figs/3-Spark-shell(3).png)
+
+### test4
+> 预测给定的商家中，哪些新消费者在未来会成为忠实客户，即需要预测这些新消费者在6个月内再次购买的概率。基于Spark MLlib编写程序预测回头客，评估实验结果的准确率。
+
+1. [数据处理及特征工程](https://tianchi.aliyun.com/notebook-ai/detail?spm=5176.12586969.1002.6.1f1b1d8ajhu7ip&postId=143593)
+
+   特征建立 - 
+
+```
+用户的年龄(age_range)
+用户的性别(gender)
+某用户在该商家日志的总条数(total_logs)
+用户浏览的商品的数目，就是浏览了多少个商品(unique_item_ids)
+浏览的商品的种类的数目，就是浏览了多少种商品(categories)
+用户浏览的天数(browse_days)
+用户单击的次数(one_clicks)
+用户添加购物车的次数(shopping_carts)
+用户购买的次数(purchase_times)
+用户收藏的次数(favourite_times)
+```
+
+见 dataDealing.py 
+
+2. [随机森林预测](https://www.jianshu.com/p/aa6cb1ef6f69)
+
+由 baseline data_train的结果呈现，发现其随机森林预测正确率最高，因此采取spark ml中的random forest 进行预测
