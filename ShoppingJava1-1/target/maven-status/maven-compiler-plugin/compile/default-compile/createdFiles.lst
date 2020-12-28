@@ -1,0 +1,5 @@
+t1\test1.class
+t1\test1$AutoReducer.class
+t1\test1$IntSumReducer.class
+t1\test1$IntWritableDecreasingComparator.class
+t1\test1$TokenizerMapper.class
