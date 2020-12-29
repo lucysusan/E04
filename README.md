@@ -41,7 +41,7 @@ $ bin/run-example SparkPi 2>&1 | grep "Pi is roughly"
 
 ![setupsuc](figs/0-setupsuc.png)
 
-### test1
+### test1 - scala
 
 > 统计双十一最热门的商品和最受年轻人(age<30)关注的商家（“添加购物车+购买+添加收藏夹”前100名）
 
@@ -127,6 +127,30 @@ sc.parallelize(rddss).saveAsTextFile("hdfs:///e04/output1-2")
 ![1.2-Result(2)](figs/1.2-Result(2).png)
 
 ![1.2-Result(3)](figs/1.2-Result(3).png)
+
+### test1 - java
+见 `ShoppingJava` 文件夹，运行结果：
+
+1-1
+
+![1-java-bash](figs/1-java-bash.png)
+
+![1-java-result](figs/1-java-result.png)
+
+![1-java-result(2)](figs/1-java-result(2).png)
+
+![1-java-result(3)](figs/1-java-result(3).png)
+
+1-2
+
+![1-java2-result(1)](figs/1-java2-result(1).png)
+
+![1-java2-result(2)](figs/1-java2-result(2).png)
+
+![1-java2-result(3)](figs/1-java2-result(3).png)
+
+
+
 
 ### test2
 
@@ -311,9 +335,37 @@ dfra.withColumn("ratio",dfra("num")/329039).show
 ### test4
 > 预测给定的商家中，哪些新消费者在未来会成为忠实客户，即需要预测这些新消费者在6个月内再次购买的概率。基于Spark MLlib编写程序预测回头客，评估实验结果的准确率。
 
-1. [数据处理及特征工程](https://tianchi.aliyun.com/notebook-ai/detail?spm=5176.12586969.1002.6.1f1b1d8ajhu7ip&postId=143593)
+1. pyspark [配置](https://blog.csdn.net/hecongqing/article/details/85016154) [参考](https://blog.csdn.net/donaldsy/article/details/96194346)
 
-   特征建立 - 
+   ```bash
+   $ pip install pyspark
+   ```
+   
+   使用 jupyter notebook 编写的配置
+   
+   ```bash
+   # ~/.bashrc 中添加
+   export PYSPARK_DRIVER_PYTHON=jupyter
+   export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
+   ```
+   ```bash
+   $ jupyter notebook --generate-config
+   $ vim ~/.jupyter/jupyter_notebook_config.py
+   			#修改
+            c.NotebookApp.allow_root = True
+   ```
+   
+   ```bash
+   $ start-all.sh	# 开启hadoop,hdfs
+   $ $SPARK-HOME/sbin/start-all.sh	# 开启spark
+   $ pyspark	# 打开相应网址进行在线编辑
+   ```
+   
+   
+   
+2. [数据处理及特征工程](https://tianchi.aliyun.com/notebook-ai/detail?spm=5176.12586969.1002.6.1f1b1d8ajhu7ip&postId=143593)
+
+   特征建立 - 与参考网址一致
 
 ```
 用户的年龄(age_range)
@@ -328,8 +380,24 @@ dfra.withColumn("ratio",dfra("num")/329039).show
 用户收藏的次数(favourite_times)
 ```
 
-见 dataDealing.py 
+见 `dataDealing.py`  
 
 2. [随机森林预测](https://www.jianshu.com/p/aa6cb1ef6f69)
 
 由 baseline data_train的结果呈现，发现其随机森林预测正确率最高，因此采取spark ml中的random forest 进行预测
+
+`pyspark-ml.py` 参数设定：
+- 测试集与训练集划分比例 `randomSplit([0.7,0.3])`
+- 随机森林基学习器数量 `numTree=200`
+
+调用 `pyspark.ml.evaluation` 中的 `MulticlassClassificationEvaluator` 计算**Accuracy=0.94** 
+调用 `pyspark.ml.evaluation` 中的 `BinaryClassificationEvaluator` 计算**AUC=0.62** 
+
+3. 运行结果
+
+![4-bash](figs/4-bash.png)
+
+![4-dataDealing](figs/4-dataDealing.png)
+
+![4-0.7-3](figs/4-0.7-3.png)
+
